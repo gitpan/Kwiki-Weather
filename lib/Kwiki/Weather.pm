@@ -4,7 +4,7 @@ use warnings;
 use Kwiki::Plugin '-Base';
 use Kwiki::Installer '-base';
 
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 const class_title => 'Kwiki Weather';
 const class_id => 'weather';
@@ -122,3 +122,7 @@ __template/tt2/weather_button.html__
 [% INCLUDE weather_button_icon.html %]
 </a>
 <!-- END weather_button.html -->
+__template/tt2/weather_button_icon.html__
+<!-- BEGIN weather_button_icon.html -->
+Weather
+<!-- END weather_button_icon.html -->

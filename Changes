@@ -1,4 +1,10 @@
 ---
+version: 0.02
+date:    Mon Jun 21 06:57:09 PDT 2004
+changes:
+- Forgot weather_button_icon.html
+
+---
 version: 0.01
 date:    Mon Jun 21 06:57:09 PDT 2004
 changes:
