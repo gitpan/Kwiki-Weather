@@ -1,0 +1,17 @@
+NAME
+    Kwiki::Icons::Gnome - Kwiki Gnome Icons Plugin
+
+SYNOPSIS
+DESCRIPTION
+AUTHOR
+    Ian Langworth <ian@langworth.com>
+
+COPYRIGHT
+    Copyright (c) 2004. Ian Langworth. All rights reserved.
+
+    Since the Gnome(tm) icons are distributed under the terms of the GNU
+    Public Licence (GPL), this module is also distributed under the terms of
+    the GPL.
+
+    See http://www.gnu.org/copyleft/gpl.html
+
