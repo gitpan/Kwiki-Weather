@@ -8,8 +8,8 @@ license('perl');
 
 requires(qw(
     perl 5.6.1
-    Kwiki 0.30
-    Kwiki::Zipcode 0.10
+    Kwiki 0.32
+    Kwiki::Zipcode 0.11
     Geo::Weather 0
 ));
 

@@ -2,14 +2,13 @@ package Kwiki::Weather;
 use strict;
 use warnings;
 use Kwiki::Plugin '-Base';
-use Kwiki::Installer '-base';
+use mixin 'Kwiki::Installer';
 
-our $VERSION = 0.02;
+our $VERSION = '0.03';
 
-const class_title => 'Kwiki Weather';
+const class_title => 'Weather Report';
 const class_id => 'weather';
 const cgi_class => 'Kwiki::Weather::CGI';
-const screen_template => 'weather_screen.html';
 field 'geo_weather';
 
 sub register {
@@ -22,8 +21,9 @@ sub register {
 
 sub weather {
     my $zipcode = $self->cgi->zipcode;
-    return $self->template->process('weather_error.html')
-      unless $zipcode =~ /^\d{5}$/;
+    return $self->render_screen(
+        content_pane => 'weather_error.html'
+    ) unless $zipcode =~ /^\d{5}$/;
     require Geo::Weather;
     my $weather = Geo::Weather->new;
     $weather->get_weather($zipcode);
@@ -94,21 +94,16 @@ it under the same terms as Perl itself.
 
 =cut
 
-__template/tt2/weather_screen.html__
-<!-- BEGIN weather_page.html -->
-[% screen_title = 'Weather Report' %]
-[% INCLUDE kwiki_layout_begin.html %]
+__template/tt2/weather_content.html__
+<!-- BEGIN weather_content.html -->
 [% self.geo_weather.report %]
 <hr/>
 [% self.geo_weather.report_forecast %]
-[% INCLUDE kwiki_layout_end.html %]
-<!-- END weather_page.html -->
+<!-- END weather_content.html -->
 __template/tt2/weather_error.html__
 <!-- BEGIN weather_error.html -->
 [% screen_title = 'Weather Report' %]
-[% INCLUDE kwiki_layout_begin.html %]
 <p><span class="error">Please specify a zipcode in your Preferences.</span></p>
-[% INCLUDE kwiki_layout_end.html %]
 <!-- END weather_error.html -->
 __template/tt2/weather_report.html__
 <!-- BEGIN weather_report.html -->
@@ -118,7 +113,7 @@ __template/tt2/weather_report.html__
 <!-- END weather_report.html -->
 __template/tt2/weather_button.html__
 <!-- BEGIN weather_button.html -->
-<a href="[% script_name %]?action=weather&zipcode=[% hub.preferences.zipcode.value %]" title="Local Weather Report">
+<a href="[% script_name %]?action=weather&zipcode=[% hub.users.current.preferences.zipcode.value %]" title="Local Weather Report">
 [% INCLUDE weather_button_icon.html %]
 </a>
 <!-- END weather_button.html -->
