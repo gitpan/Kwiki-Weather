@@ -4,7 +4,7 @@ use warnings;
 use Kwiki::Plugin '-Base';
 use mixin 'Kwiki::Installer';
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 const class_title => 'Weather Report';
 const class_id => 'weather';

@@ -1,5 +1,5 @@
 name: Kwiki-Weather
-version: 0.03
+version: 0.04
 abstract: Weather button and WAFL for your Kwiki
 author: Ian Langworth <langworth.com>
 license: perl
@@ -12,4 +12,4 @@ requires:
 no_index:
   directory:
     - inc
-generated_by: Module::Install version 0.33
+generated_by: Module::Install version 0.35

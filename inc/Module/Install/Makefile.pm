@@ -1,4 +1,4 @@
-#line 1 "inc/Module/Install/Makefile.pm - /usr/lang/perl/5.8.3/lib/site_perl/5.8.3/Module/Install/Makefile.pm"
+#line 1 "inc/Module/Install/Makefile.pm - /proj/systems/bass/hostbeast/server/local/lib/perl5/site_perl/5.8.4/Module/Install/Makefile.pm"
 # $File: //depot/cpan/Module-Install/lib/Module/Install/Makefile.pm $ $Author: autrijus $
 # $Revision: #53 $ $Change: 1847 $ $DateTime: 2003/12/31 23:14:54 $ vim: expandtab shiftwidth=4
 

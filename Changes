@@ -1,4 +1,16 @@
 ---
+version: 0.04
+date:    Tue Jul 20 16:36:26 EDT 2004
+changes:
+- Release for Kwik-0.32
+
+---
+version: 0.03
+date:    
+changes:
+- Don't worry about this release.
+
+---
 version: 0.02
 date:    Mon Jun 21 06:57:09 PDT 2004
 changes:
