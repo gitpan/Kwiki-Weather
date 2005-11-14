@@ -2,7 +2,7 @@ use inc::Module::Install;
 
 name('Kwiki-Weather');
 abstract('Weather button and WAFL for your Kwiki');
-author('Ian Langworth <langworth.com>');
+author('Ian Langworth <ian@cpan.org>');
 version_from('lib/Kwiki/Weather.pm');
 license('perl');
 
